@@ -4,59 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LINE URL Generator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7; /* 薄い灰色 */
-            color: #333; /* 濃い灰色 */
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background: #fff; /* 白背景 */
-            border: 1px solid #ddd; /* 薄いグレーの枠 */
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #555; /* 落ち着いたグレー */
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #666; /* 薄いグレー */
-        }
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc; /* 薄いグレー */
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: #f9f9f9; /* 明るい灰色 */
-            color: #333;
-        }
-        button {
-            background-color: #e0e0e0;
-            color: #333;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #d6d6d6; /* ホバー時に少し濃く */
-        }
-        pre {
-            background: #f4f4f4;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            color: #444;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- CSSファイルをリンク -->
 </head>
 <body>
     <div class="container">
@@ -87,27 +35,6 @@
         <pre id="resultUrl"></pre>
     </div>
 
-    <script>
-        document.getElementById("urlForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            const url = encodeURIComponent(document.getElementById("url").value);
-            const img = encodeURIComponent(document.getElementById("img").value);
-            const x = encodeURIComponent(document.getElementById("x").value);
-            const y = encodeURIComponent(document.getElementById("y").value);
-            const title = encodeURIComponent(document.getElementById("title").value);
-            const text = encodeURIComponent(document.getElementById("text").value);
-
-            // Denoサーバーへのリクエスト
-            fetch(`http://localhost:8000?url=${url}&img=${img}&x=${x}&y=${y}&title=${title}&text=${text}`)
-                .then(response => response.text())
-                .then(generatedUrl => {
-                    document.getElementById("resultUrl").textContent = generatedUrl;
-                })
-                .catch(error => {
-                    console.error("URL生成エラー:", error);
-                });
-        });
-    </script>
+    <script src="script.js"></script> <!-- JavaScriptファイルをリンク -->
 </body>
 </html>
