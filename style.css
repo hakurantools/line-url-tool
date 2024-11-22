@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7; /* 薄い灰色 */
-    color: #333; /* 濃い灰色 */
+    background-color: #f7f7f7; 
+    color: #333;
     margin: 0;
     padding: 20px;
 }
@@ -10,32 +10,32 @@ body {
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    background: #fff; /* 白背景 */
-    border: 1px solid #ddd; /* 薄いグレーの枠 */
+    background: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #555; /* 落ち着いたグレー */
+    color: #555;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #666; /* 薄いグレー */
+    color: #666;
 }
 
 input, textarea, button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc; /* 薄いグレー */
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    background-color: #f9f9f9; /* 明るい灰色 */
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-    background-color: #d6d6d6; /* ホバー時に少し濃く */
+    background-color: #d6d6d6;
 }
 
 pre {
